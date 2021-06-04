@@ -80,6 +80,9 @@ python3 $SUMO_HOME/tools/randomTrips.py -n osm.net.xml -r osm.rou.xml -e 3600
 
 
 ### RUN
+```
+python3 experiments/dqn_suwon.py 
+```
 
 
 ## 결과 분석
