@@ -2,6 +2,7 @@
 ## 2021711877 정훈섭
 ## 2021711888 윤재구
 
+***
 
 ## 프로젝트 목표
 상습정체구역인 수원역 인근 도로의 교통량을 시뮬레이션.
@@ -9,6 +10,13 @@
 
 
 추후 교통량 정보의 경우 공공데이터로부터 실제 데이터를 넣을 수 있을 것으로 예상.(현재, 수원역 근처 교통량 정보와 관련된 공공데이터는 없음.)
+
+***
+
+## 코드 실행 방법
+하기 SUMO-RL Install(Install SUMO latest version, Install SUMO-RL) 진행 후, RUN 실행.
+
+***
 
 ## 연관 플랫폼, 라이브러리
 
@@ -56,10 +64,12 @@ pip install -e .
 
 ### Install mandatory requirements via PIP
 ```
-pip3 install ~~~
+pip3 install baselines3
 ```
 
-## 환경 설정
+***
+
+## 환경 설정 (별도로 실행할 필요 없음)
 ### 지도데이터 생성
 상습정체구역인 수원역 근처의 지도를 이용
 
@@ -69,6 +79,7 @@ pip3 install ~~~
 각 교차로마다 신호등 정보 생성
 
 ```
+netedit
 ```
 
 ### 교통정보(시간에 따른 차량 및 차량 이동경로) 생성
@@ -76,11 +87,15 @@ pip3 install ~~~
 python3 $SUMO_HOME/tools/randomTrips.py -n osm.net.xml -r osm.rou.xml -e 3600
 ```
 
+***
 
-### RUN
+## RUN
 ```
-python3 experiments/dqn_suwon.py 
+# Create directories as outputs/suwon, outputs/suwon_dqn first.
+mkdir -p outputs/suwon outputs/suwon_dqn
+
+# DQN
+python3 experiments/dqn_suwon_failover.py
+# A2C
+python3 experiments/a2c_suwon_failover.py
 ```
-
-
-## 결과 분석
