@@ -50,12 +50,7 @@ source ~/.bashrc
 
 ### Install SUMO-RL
 
-Stable release version is available through pip
-```
-pip install sumo-rl
-```
-
-Alternatively you can install using the latest (unreleased) version
+You can install using the latest (unreleased) version
 ```
 git clone https://github.com/LucasAlegre/sumo-rl
 cd sumo-rl
@@ -64,10 +59,17 @@ pip install -e .
 
 ### Install mandatory requirements via PIP
 ```
-pip3 install baselines3
+pip3 install stable_baselines3
 ```
 
 ***
+
+### Git clone sumo-RL
+```
+cd ../
+git clone https://github.com/hs85jeong/sumo-RL
+git checkout submit
+```
 
 ## 환경 설정 (별도로 실행할 필요 없음)
 ### 지도데이터 생성
