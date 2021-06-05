@@ -42,12 +42,7 @@ source ~/.bashrc
 
 ### Install SUMO-RL
 
-Stable release version is available through pip
-```
-pip install sumo-rl
-```
-
-Alternatively you can install using the latest (unreleased) version
+You can install the SUMO-RL using the latest (unreleased) version
 ```
 git clone https://github.com/LucasAlegre/sumo-rl
 cd sumo-rl
