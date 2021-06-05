@@ -25,13 +25,12 @@ if __name__ == '__main__':
                                         single_agent=True,
                                         use_gui=False,
                                         num_seconds=4000,
-                                        max_depart_delay=20, count=run) for _ in range(n_cpu)])
+                                        max_depart_delay=20) for _ in range(n_cpu)])
 
     while True:
         model = A2C("MlpPolicy", env, verbose=1, n_steps=100)
 
         run = len([name for name in os.listdir(DIR) if os.path.isfile(os.path.join(DIR, name))])
-        env.count = run
 
         try:
             model.load("a2c_suwon")

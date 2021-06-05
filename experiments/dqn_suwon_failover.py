@@ -36,7 +36,6 @@ if __name__ == '__main__':
         )
 
         run = len([name for name in os.listdir(DIR) if os.path.isfile(os.path.join(DIR, name))])
-        env.count = run
 
         try:
             model.load("dqn_suwon")
